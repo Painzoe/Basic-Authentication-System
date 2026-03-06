@@ -1,0 +1,25 @@
+[Unit]
+Description=Go Auth System Service
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/lib/auth-system
+ExecStart=/usr/local/bin/auth-server
+Restart=always
+RestartSec=5
+# Security hardening
+ProtectSystem=full
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Environment Configuration
+Environment=PORT=8080
+Environment=DB_PATH=/var/lib/auth-system/auth.db
+# SECRET_KEY should be set in a separate override or secure env file
+# Environment=SECRET_KEY=...
+
+[Install]
+WantedBy=multi-user.target
