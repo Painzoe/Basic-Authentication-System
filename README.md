@@ -40,3 +40,6 @@ chmod +x auth.sh
 
 ---
 *Geliştirici Notu: Proje eğitim amaçlıdır, ufak tefek geliştirmeler yapılabilir (rate limit vs).*
+
+### Katkıda Bulunma
+Projeye katkıda bulunmak isterseniz lütfen [Katkıda Bulunma Rehberi'ni](contributions.md) inceleyin.
